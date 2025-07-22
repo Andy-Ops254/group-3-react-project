@@ -35,9 +35,17 @@ const styles = {
         alignItems: "center",
     },
     link: {
-        color: "rgb(51, 51, 51)",
+        color: "rgb(255, 255, 255)",
         fontSize: "16px",
         textDecoration: "none",
         transition: "color 0.3s ease",
+    },
+    badge: {
+        color:"rgb(255, 255, 255)",
+        backgroundColor: "#dc2626",
+        borderRadius: "50%",
+        padding: "2px 8px",
+        fontSize: "0.8rem",
+        marginLeft: "5px",
     }
 }
