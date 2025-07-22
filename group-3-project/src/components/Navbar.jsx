@@ -15,8 +15,13 @@ function Navbar({cartCount}) {
                 onMouseEnter={() => handleMouseEnter("home")}
                 onMouseLeave={handleMouseLeave}
                 >Home</a>
-                <a href="" style={styles.link}>
-                    cart <span style={styles.badge}>{cart}</span>
+                <a href="" style={{...styles.link,
+                    color:hovered === "cart" ? "#f59e0b" : "#fff",
+                }}
+                onMouseEnter={() => handleMouseEnter("cart")}
+                onMouseLeave={handleMouseLeave}
+                >
+                 cart <span style={styles.badge}>{cart}</span>
                 </a>
             </div>
         </nav>
