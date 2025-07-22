@@ -1,3 +1,5 @@
+import {useState} from "react";
+
 function Navbar({cartCount}) {
     return (
         <nav style={Styles.nav}>
