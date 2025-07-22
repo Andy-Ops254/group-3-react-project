@@ -5,8 +5,10 @@ function App() {
 const [jewelryList, setJewelryList]=useState([]) //calling state
 
 useEffect(()=>  {
-  fetch()
-})
+  fetch("http://localhost:3000/")
+  .then(res => res.json())
+  .then(Data => console.log(Data))
+}, [])
 
 
   return (
