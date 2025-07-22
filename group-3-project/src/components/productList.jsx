@@ -7,7 +7,9 @@ function ProductList ({jewelries}) {
     // console.log(jewelries) //confirm if propr has contentn
     return (
         <div>
-            <h2 className=''>ALL JEWELRY</h2>
+            <h2 className='text-2xl font-bold font-serif italic text-center my-4'>ALL JEWELRY</h2>
+            <p className="font-light italic text-md text-center mb-4">"Explore Our Curated Treasures Across The Seven Seas"</p>
+
             <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
             {jewelries.map((jewelry)=> (
                 <ProductCard key={jewelry.id} 
