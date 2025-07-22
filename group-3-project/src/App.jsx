@@ -1,19 +1,24 @@
 import react,{useState, useEffect} from 'react'
 import jewelryData from '../jewelryData'
+
+
+
+
+
 function App() {
-  // console.log(jewelryData) JSON DATA IS WORKING Guys!!
+  // console.log(jewelryData) //JSON DATA IS WORKING Guys!!
 const [jewelryList, setJewelryList]=useState([]) //calling state
 
 useEffect(()=>  {
-  fetch("http://localhost:3000/")
+  fetch("http://localhost:3000/jewelryData")
   .then(res => res.json())
-  .then(Data => console.log(Data))
+  .then(Data => setJewelryList(Data)) //update the state, passdown as prop to component
 }, [])
 
 
   return (
     <>
-    <h1></h1>
+    <productList jewelries={jewelryList} />
     </>
   )
 }
