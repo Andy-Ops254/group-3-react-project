@@ -28,5 +28,10 @@ const styles = {
         fontWeight: "bold",
         color: "rgb(51, 51, 51)"
         
+    },
+    menu: {
+        display: "flex",
+        gap: "32px",
+        alignItems: "center",
     }
 }
