@@ -4,9 +4,9 @@ function Navbar({cartCount}) {
     const [hovered, setHovered] = useState(null);
     const handleMouseEnter = (item) => setHovered(item)
     const handleMouseLeave = () => setHovered(null)
-    
+
     return (
-        <nav style={Styles.nav}>
+        <nav style={styles.nav}>
             <h1 style={styles.logo}>Jewelry Boutique</h1>
             <div style={styles.menu}>
                 <a href="" style={styles.link}>Home</a>
