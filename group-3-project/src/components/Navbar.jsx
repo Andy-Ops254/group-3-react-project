@@ -23,5 +23,10 @@ const styles = {
         top: 0,
         zIndex: 10,
     },
-    logo
+    logo: {
+        fontSize: "1.8rem",
+        fontWeight: "bold",
+        color: "rgb(51, 51, 51)"
+        
+    }
 }
