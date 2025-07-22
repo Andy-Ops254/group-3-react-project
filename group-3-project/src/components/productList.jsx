@@ -4,7 +4,7 @@ import ProductCard from './ProductCard';
 
 
 function ProductList ({jewelries}) {
-    console.log(jewelries) //confirm if propr has contentn
+    // console.log(jewelries) //confirm if propr has contentn
     return (
         <div>ALL JEWELRY
             <div>
@@ -21,7 +21,9 @@ function ProductList ({jewelries}) {
             ))}
             </div>
         </div>
+        
     )
+    
 }
 
 export default ProductList;
