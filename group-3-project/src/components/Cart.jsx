@@ -37,6 +37,11 @@ function Cart({items, onRemove }){
             {/*and also loop throup each item in the cart*/}
             {/*added a button which when clicked calls onRemove with the item's index to delete it from the cart*/}
 
+            <div className="cart-total">
+                <strong>Total:</strong> ${total.toFixed(2)}
+            </div>
+            {/*here i show the total price of all items in the cart*/}
+
         </section>
     )
 }
