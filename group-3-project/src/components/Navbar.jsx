@@ -9,13 +9,13 @@ function Navbar({cartCount}) {
         <nav style={styles.nav}>
             <h1 style={styles.logo}>Jewelry Boutique</h1>
             <div style={styles.menu}>
-                <a href="" style={{...styles.link,
+                <a href="#" style={{...styles.link,
                     color:hovered === "home" ? "#f59e0b" : "#fff",
                 }}
                 onMouseEnter={() => handleMouseEnter("home")}
                 onMouseLeave={handleMouseLeave}
                 >Home</a>
-                <a href="" style={{...styles.link,
+                <a href="#" style={{...styles.link,
                     color:hovered === "cart" ? "#f59e0b" : "#fff",
                 }}
                 onMouseEnter={() => handleMouseEnter("cart")}
