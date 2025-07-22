@@ -10,8 +10,29 @@ function Cart({items, onRemove }){
             {items.length === 0 ?(
                 <p>Your cart is empty.</p>
             ) : (
-                <ul className = "cart-list"></ul>
+                <ul className = "cart-list">
+                    {items.map((item, index) =>(
+                        <li key={index} className="cart-item">
+                            <img
+                            src={item.image}
+                            alt={item.name}
+                            className="cart-image"
+                            />
+                            
+                            <div className="cart-info">
+                                <h4>{item.name}</h4>
+                                {/*this shows the product name*/}
+
+                                <p>${item.price}</p>
+                                {/*and this shows the product price*/}
+                                
+                            </div>
+                        </li>
+                    ))}
+                </ul>
             )} {/*then i show a message if the cart is empty*/}
+            {/*then i display the product image*/}
+            {/*and also loop throup each item in the cart*/}
         </section>
     )
 }
