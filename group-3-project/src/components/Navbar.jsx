@@ -33,5 +33,11 @@ const styles = {
         display: "flex",
         gap: "32px",
         alignItems: "center",
+    },
+    link: {
+        color: "rgb(51, 51, 51)",
+        fontSize: "16px",
+        textDecoration: "none",
+        transition: "color 0.3s ease",
     }
 }
