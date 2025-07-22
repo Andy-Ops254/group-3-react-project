@@ -11,3 +11,17 @@ function Navbar({cartCount}) {
         </nav>
     )
 }
+const styles = {
+    nav: {
+        backgroundColor: rgb(245, 245, 245),
+        padding:"16px 32px",
+        display:"flex",
+        justifyContent:"space-between",
+        alignItems:"center",
+        borderBottom:"1px solid #ddd",
+        position:"sticky",
+        top: 0,
+        zIndex: 10,
+    },
+    logo
+}
