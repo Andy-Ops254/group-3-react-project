@@ -21,7 +21,7 @@ function Navbar({cartCount}) {
                 onMouseEnter={() => handleMouseEnter("cart")}
                 onMouseLeave={handleMouseLeave}
                 >
-                 cart <span style={styles.badge}>{cart}</span>
+                 cart <span style={styles.badge}>{cartCount}</span>
                 </a>
             </div>
         </nav>
