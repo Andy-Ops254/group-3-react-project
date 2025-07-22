@@ -1,7 +1,6 @@
 import react,{useState, useEffect} from 'react'
 import jewelryData from '../jewelryData'
-
-
+import ProductList from './components/productList'
 
 
 
@@ -18,7 +17,7 @@ useEffect(()=>  {
 
   return (
     <>
-    <productList jewelries={jewelryList} />
+    <ProductList jewelries={jewelryList} />
     </>
   )
 }
