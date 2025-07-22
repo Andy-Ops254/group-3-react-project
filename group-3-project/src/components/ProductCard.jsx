@@ -1,4 +1,5 @@
 import React from 'react'
+
 //importinf tprops form productList
 function ProductCard ({name, price, image, category}) {
   return (
@@ -12,7 +13,7 @@ function ProductCard ({name, price, image, category}) {
             name: {name},
 
             category: {category},
-            
+
             <button>Add To Cart</button>
         </div>
     </div>
