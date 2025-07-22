@@ -7,6 +7,11 @@ function Cart({items, onRemove }){
     return (
         <section className="cart-section">
             <h2>Cart</h2>
+            {items.length === 0 ?(
+                <p>Your cart is empty.</p>
+            ) : (
+                <ul className = "cart-list"></ul>
+            )} {/*then i show a message if the cart is empty*/}
         </section>
     )
 }
