@@ -1,6 +1,10 @@
 import {useState} from "react";
 
 function Navbar({cartCount}) {
+    const [hovered, setHovered] = useState(null);
+    const handleMouseEnter = (item) => setHovered(item)
+    const handleMouseLeave = () => setHovered(null)
+    
     return (
         <nav style={Styles.nav}>
             <h1 style={styles.logo}>Jewelry Boutique</h1>
