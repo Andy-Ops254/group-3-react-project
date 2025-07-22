@@ -20,8 +20,9 @@ useEffect(()=>  {
 
   return (
     <>
-    <ProductList jewelries={jewelryList} />
     <Navbar cartCount={cartCount} />
+
+    <ProductList jewelries={jewelryList} />
     </>
     
   )
