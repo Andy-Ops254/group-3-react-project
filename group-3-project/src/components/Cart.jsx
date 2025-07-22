@@ -25,7 +25,9 @@ function Cart({items, onRemove }){
 
                                 <p>${item.price}</p>
                                 {/*and this shows the product price*/}
-                                
+
+                                <button onClick={() => onRemove(index)}>Remove</button>
+
                             </div>
                         </li>
                     ))}
@@ -33,6 +35,8 @@ function Cart({items, onRemove }){
             )} {/*then i show a message if the cart is empty*/}
             {/*then i display the product image*/}
             {/*and also loop throup each item in the cart*/}
+            {/*added a button which when clicked calls onRemove with the item's index to delete it from the cart*/}
+
         </section>
     )
 }
