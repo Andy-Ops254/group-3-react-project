@@ -1,10 +1,23 @@
 import React from 'react'
-
-function ProductCard () {
+//importinf tprops form productList
+function ProductCard ({name, price, image, category}) {
   return (
-    <div>
-        
+    <div className='card'>
+
+        <img src= {image} alt={name}/> 
+
+        <div>
+            price: {price},
+
+            name: {name},
+
+            category: {category},
+            
+            <button>Add To Cart</button>
+        </div>
     </div>
+            //Button structure
+
   )
 }
 

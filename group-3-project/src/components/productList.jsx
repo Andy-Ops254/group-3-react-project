@@ -7,17 +7,19 @@ function ProductList ({jewelries}) {
     console.log(jewelries) //confirm if propr has contentn
     return (
         <div>ALL JEWELRY
-            <ul>
+            <div>
             {jewelries.map((jewelry)=> (
-                <li key={jewelry.id}>
+                <ProductCard key={jewelry.id} 
                 name={jewelry.name}
                 price={jewelry.price}
                 image={jewelry.image}
-            
-                </li>
-                //displayed elements as lists
+                category={jewelry.category}
+                />
+                
+                //displayed elements as lists first
+                //used the product card component finl
             ))}
-            </ul>
+            </div>
         </div>
     )
 }
