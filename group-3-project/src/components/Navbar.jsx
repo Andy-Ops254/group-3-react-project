@@ -1,6 +1,8 @@
 import {useState} from "react";
+import { NavLink } from "react-router-dom";
 
-function Navbar({cartCount}) {
+
+function Navbar() {
     const [hovered, setHovered] = useState(null);
     const handleMouseEnter = (item) => setHovered(item)
     const handleMouseLeave = () => setHovered(null)
@@ -9,20 +11,22 @@ function Navbar({cartCount}) {
         <nav style={styles.nav}>
             <h1 style={styles.logo}>Jewelry Boutique</h1>
             <div style={styles.menu}>
-                <a href="#" style={{...styles.link,
+                <NavLink to="/" href="#" style={{...styles.link,
                     color:hovered === "home" ? "#6FE6FC" : "#fff",
                 }}
                 onMouseEnter={() => handleMouseEnter("home")}
-                onMouseLeave={handleMouseLeave}
-                >Home</a>
-                <a href="#" style={{...styles.link,
-                    color:hovered === "cart" ? "blue" : "#fff",
+                onMouseLeave={handleMouseLeave} id="home"
+                >Home </NavLink>
+
+                 <NavLink to="/About" href="#" style={{...styles.link,
+                    color:hovered === "about" ? "#6FE6FC" : "#fff",
                 }}
-                onMouseEnter={() => handleMouseEnter("cart")}
-                onMouseLeave={handleMouseLeave}
-                >
-                 cart <span style={styles.badge}>{cartCount}</span>
-                </a>
+                onMouseEnter={() => handleMouseEnter("about")}
+                onMouseLeave={handleMouseLeave} id="about"
+                >About</NavLink>
+                 <div>
+            </div>
+
             </div>
         </nav>
     )
@@ -52,19 +56,13 @@ const styles = {
         gap: "32px",
         alignItems: "center",
     },
+    
     link: {
         color: "rgb(255, 255, 255)",
         fontSize: "16px",
         textDecoration: "none",
         transition: "color 0.3s ease",
     },
-    badge: {
-        color:"rgb(255, 255, 255)",
-        backgroundColor: "#dc2626",
-        borderRadius: "50%",
-        padding: "2px 8px",
-        fontSize: "0.8rem",
-        marginLeft: "5px",
-    }
+  
 }
 export default Navbar;
