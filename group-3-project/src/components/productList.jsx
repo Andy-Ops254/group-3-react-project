@@ -3,7 +3,7 @@ import App from '../App';
 import ProductCard from './ProductCard';
 
 
-function ProductList ({jewelries}) {
+function ProductList ({jewelries, onAddToCart}) {
     // console.log(jewelries) //confirm if propr has contentn
     return (
         <div>
