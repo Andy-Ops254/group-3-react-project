@@ -21,8 +21,7 @@ useEffect(()=>  {
   return (
     <>
     <Navbar cartCount={cartCount} />
-
-   <ProductList jewelries={jewelryList} />
+    <ProductList jewelries={jewelryList} />
     </>
     
   )

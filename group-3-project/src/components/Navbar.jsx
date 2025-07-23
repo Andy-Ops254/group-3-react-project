@@ -29,6 +29,7 @@ function Navbar({cartCount}) {
 }
 const styles = {
     nav: {
+
         backgroundColor: "#0065F8",
         padding:"16px 32px",
         display:"flex",
