@@ -38,7 +38,7 @@ function handleRemoveFromCart(index) {
     {/*then i pass the total cart count to the navbar so it can be displayed to the user*/}
 
     <ProductList jewelries={jewelryList} onAddToCart={handleAddToCart} />
-    {/*passed the add to cart handler down to each product component*/}\
+    {/*passed the add to cart handler down to each product component*/}
 
     <Cart items={cart} onRemove={handleRemoveFromCart} />
     {/*then rendered the cart component and passed the cart items and remove handler as props */}
