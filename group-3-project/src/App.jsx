@@ -2,6 +2,7 @@ import react,{useState, useEffect, useDebugValue} from 'react'
 import jewelryData from '../jewelryData'
 import ProductList from './components/productList'
 import Navbar from './components/Navbar'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 
 
@@ -20,8 +21,11 @@ useEffect(()=>  {
   return (
     <>
     <Navbar />
-    <ProductList jewelries={jewelryList} />
+    <Routes>
+      <Route path="/" element={<ProductList jewelries={jewelryList} />} />
+    </Routes>
     </>
+
     
   )
 }
