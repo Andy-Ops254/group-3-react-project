@@ -17,7 +17,9 @@ function ProductList ({jewelries}) {
                 price={jewelry.price}
                 image={jewelry.image}
                 category={jewelry.category}
+                onAddToCart={onAddToCart}
                 />
+
                 //displayed elements as lists first
                 //used the product card component finl
             ))}
