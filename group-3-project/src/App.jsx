@@ -7,12 +7,18 @@ import Cart from './components/Cart'
 function App() {
   // console.log(jewelryData) //JSON DATA IS WORKING Guys!!
 const [jewelryList, setJewelryList]=useState([]) //calling state
+const [cart, setCart] = useState([]); 
+//first i add state to store the list of items in the cart
+
+const cartCount = cart.length;
+//then i create a variable to track and display the number of items in the cart
 
 useEffect(()=>  {
   fetch("http://localhost:3000/jewelryData")
   .then(res => res.json())
   .then(Data => setJewelryList(Data)) //update the state, passdown as prop to component
 }, [])
+
 
 
   return (
