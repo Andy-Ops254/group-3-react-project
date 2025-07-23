@@ -18,7 +18,7 @@ function ProductCard ({name, price, image, category}) {
     </div>
             //Button structure
 
-  )
+ )
 }
 
 export default ProductCard
