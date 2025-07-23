@@ -19,7 +19,10 @@ useEffect(()=>  {
   .then(Data => setJewelryList(Data)) //update the state, passdown as prop to component
 }, [])
 
-
+function handleAddToCart(item){
+  setCart([...cart, item]);
+}
+//here i add a fuction to handle adding an item to the cart
 
   return (
     <>
