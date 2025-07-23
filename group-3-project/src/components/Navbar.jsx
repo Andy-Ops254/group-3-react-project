@@ -15,14 +15,7 @@ function Navbar({cartCount}) {
                 onMouseEnter={() => handleMouseEnter("home")}
                 onMouseLeave={handleMouseLeave}
                 >Home</a>
-                <a href="#" style={{...styles.link,
-                    color:hovered === "cart" ? "blue" : "#fff",
-                }}
-                onMouseEnter={() => handleMouseEnter("cart")}
-                onMouseLeave={handleMouseLeave}
-                >
-                 cart <span style={styles.badge}>{cartCount}</span>
-                </a>
+               
             </div>
         </nav>
     )
@@ -58,13 +51,6 @@ const styles = {
         textDecoration: "none",
         transition: "color 0.3s ease",
     },
-    badge: {
-        color:"rgb(255, 255, 255)",
-        backgroundColor: "#dc2626",
-        borderRadius: "50%",
-        padding: "2px 8px",
-        fontSize: "0.8rem",
-        marginLeft: "5px",
-    }
+  
 }
 export default Navbar;
