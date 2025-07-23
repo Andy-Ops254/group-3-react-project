@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-function Navbar({cartCount}) {
+function Navbar() {
     const [hovered, setHovered] = useState(null);
     const handleMouseEnter = (item) => setHovered(item)
     const handleMouseLeave = () => setHovered(null)
@@ -13,9 +13,16 @@ function Navbar({cartCount}) {
                     color:hovered === "home" ? "#6FE6FC" : "#fff",
                 }}
                 onMouseEnter={() => handleMouseEnter("home")}
-                onMouseLeave={handleMouseLeave}
+                onMouseLeave={handleMouseLeave} id="home"
                 >Home</a>
-               
+
+                <a href="#" style={{...styles.link,
+                    color:hovered === "about" ? "#6FE6FC" : "#fff",
+                }}
+                onMouseEnter={() => handleMouseEnter("about")}
+                onMouseLeave={handleMouseLeave} id="about"
+                >About</a>
+
             </div>
         </nav>
     )
@@ -45,6 +52,7 @@ const styles = {
         gap: "32px",
         alignItems: "center",
     },
+    
     link: {
         color: "rgb(255, 255, 255)",
         fontSize: "16px",
