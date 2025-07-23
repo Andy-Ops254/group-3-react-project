@@ -34,7 +34,8 @@ function handleRemoveFromCart(index) {
 
   return (
     <>
-    <Navbar />
+    <Navbar cartCount={cartCount}/>
+    {/*then i pass the total cart count to the navbar so it can be displayed to the user*/}
 
     <ProductList jewelries={jewelryList} />
     </>
