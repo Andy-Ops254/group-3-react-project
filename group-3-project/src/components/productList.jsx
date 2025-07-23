@@ -1,6 +1,7 @@
 import React from 'react'
 import App from '../App';
 import ProductCard from './ProductCard';
+import AddProductForm from './AddProductForm';
 
 
 function ProductList ({jewelries}) {
@@ -22,6 +23,8 @@ function ProductList ({jewelries}) {
                 //used the product card component finl
             ))}
             </div>
+                
+
         </div>
         
     )

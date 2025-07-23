@@ -24,7 +24,10 @@ function Navbar() {
                 onMouseEnter={() => handleMouseEnter("about")}
                 onMouseLeave={handleMouseLeave} id="about"
                 >About</NavLink>
+
                  <div>
+
+                <NavLink to="/newform">ADD NEW FORM</NavLink>
             </div>
 
             </div>
