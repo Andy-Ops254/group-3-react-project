@@ -21,12 +21,20 @@ useEffect(()=>  {
   .then(Data => setJewelryList(Data)) //update the state, passdown as prop to component
 }, [])
 
+//logic solves the repetition of jewel categories
+    let categories = ["All"]
+
+    for (const item of jewelryList) {
+        if (!categories.includes(item.category)) {
+            categories.push(item.category)
+        }
+    }
 
   return (
     <>
     <Navbar cartCount={cartCount} />
-    <CategoryFilter/>
-    <ProductList jewelries={jewelryList} />
+  
+    <ProductList jewelries={jewelryList} categories={categories} />
     </>
     
   )
