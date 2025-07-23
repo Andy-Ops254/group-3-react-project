@@ -23,7 +23,10 @@ function Cart({items, onRemove }){
                                 <h4>{item.name}</h4>
                                 {/*this shows the product name*/}
 
-                                <p>${item.price}</p>
+                                <p><strong>Category:</strong> {item.category}</p>
+                                {/*this shows the product's category*/}
+
+                                <p><strong>Price:</strong> ${item.price}</p>
                                 {/*and this shows the product price*/}
 
                                 <button onClick={() => onRemove(index)}>Remove</button>

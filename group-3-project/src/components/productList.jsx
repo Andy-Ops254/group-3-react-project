@@ -3,7 +3,7 @@ import App from '../App';
 import ProductCard from './ProductCard';
 
 
-function ProductList ({jewelries}) {
+function ProductList ({jewelries, onAddToCart}) {
     // console.log(jewelries) //confirm if propr has contentn
     return (
         <div>
@@ -17,7 +17,9 @@ function ProductList ({jewelries}) {
                 price={jewelry.price}
                 image={jewelry.image}
                 category={jewelry.category}
+                onAddToCart={onAddToCart}
                 />
+
                 //displayed elements as lists first
                 //used the product card component finl
             ))}
