@@ -3,7 +3,8 @@ import App from '../App';
 import ProductCard from './ProductCard';
 
 
-function ProductList ({jewelries, categories}) {
+function ProductList ({jewelries, categories, onAddToCart}) {
+
     // console.log(jewelries) //confirm if propr has contentn
     const [selectCategory, setSelectCategory]= useState("All")//updates app state after filter
 
@@ -47,7 +48,9 @@ function ProductList ({jewelries, categories}) {
                 price={jewelry.price}
                 image={jewelry.image}
                 category={jewelry.category}
+                onAddToCart={onAddToCart}
                 />
+
                 //displayed elements as lists first
                 //used the product card component finl
             ))}
