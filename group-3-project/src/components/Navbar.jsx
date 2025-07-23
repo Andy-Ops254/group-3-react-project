@@ -1,4 +1,6 @@
 import {useState} from "react";
+import { NavLink } from "react-router-dom";
+
 
 function Navbar() {
     const [hovered, setHovered] = useState(null);
@@ -9,19 +11,21 @@ function Navbar() {
         <nav style={styles.nav}>
             <h1 style={styles.logo}>Jewelry Boutique</h1>
             <div style={styles.menu}>
-                <a href="#" style={{...styles.link,
+                <NavLink to="/" href="#" style={{...styles.link,
                     color:hovered === "home" ? "#6FE6FC" : "#fff",
                 }}
                 onMouseEnter={() => handleMouseEnter("home")}
                 onMouseLeave={handleMouseLeave} id="home"
-                >Home</a>
+                >Home </NavLink>
 
-                <a href="#" style={{...styles.link,
+                 <NavLink to="/About" href="#" style={{...styles.link,
                     color:hovered === "about" ? "#6FE6FC" : "#fff",
                 }}
                 onMouseEnter={() => handleMouseEnter("about")}
                 onMouseLeave={handleMouseLeave} id="about"
-                >About</a>
+                >About</NavLink>
+                 <div>
+            </div>
 
             </div>
         </nav>

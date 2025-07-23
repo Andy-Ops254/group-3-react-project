@@ -3,6 +3,7 @@ import jewelryData from '../jewelryData'
 import ProductList from './components/productList'
 import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import About from './components/About'
 
 
 
@@ -23,6 +24,7 @@ useEffect(()=>  {
     <Navbar />
     <Routes>
       <Route path="/" element={<ProductList jewelries={jewelryList} />} />
+      <Route path="/About" element={<About />} />
     </Routes>
     </>
 
