@@ -10,13 +10,13 @@ function Navbar({cartCount}) {
             <h1 style={styles.logo}>Jewelry Boutique</h1>
             <div style={styles.menu}>
                 <a href="#" style={{...styles.link,
-                    color:hovered === "home" ? "#f59e0b" : "#fff",
+                    color:hovered === "home" ? "#6FE6FC" : "#fff",
                 }}
                 onMouseEnter={() => handleMouseEnter("home")}
                 onMouseLeave={handleMouseLeave}
                 >Home</a>
                 <a href="#" style={{...styles.link,
-                    color:hovered === "cart" ? "#f59e0b" : "#fff",
+                    color:hovered === "cart" ? "blue" : "#fff",
                 }}
                 onMouseEnter={() => handleMouseEnter("cart")}
                 onMouseLeave={handleMouseLeave}
@@ -29,7 +29,7 @@ function Navbar({cartCount}) {
 }
 const styles = {
     nav: {
-        backgroundColor: "rgb(245, 158, 11)",
+        backgroundColor: "#0065F8",
         padding:"16px 32px",
         display:"flex",
         justifyContent:"space-between",
@@ -42,8 +42,9 @@ const styles = {
     logo: {
         fontSize: "1.8rem",
         fontWeight: "bold",
-        color: "rgb(51, 51, 51)"
-        
+        color: "white",
+        cursor: "pointer"
+
     },
     menu: {
         display: "flex",
