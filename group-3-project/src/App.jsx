@@ -39,7 +39,9 @@ function handleRemoveFromCart(index) {
 
     <ProductList jewelries={jewelryList} onAddToCart={handleAddToCart} />
     {/*passed the add to cart handler down to each product component*/}\
-    
+
+    <Cart items={cart} onRemove={handleRemoveFromCart} />
+    {/*then rendered the cart component and passed the cart items and remove handler as props */}
     </>
     
   )
