@@ -2,14 +2,11 @@ import react,{useState, useEffect, useDebugValue} from 'react'
 import jewelryData from '../jewelryData'
 import ProductList from './components/productList'
 import Navbar from './components/Navbar'
-
-
+import Cart from './components/Cart'
 
 function App() {
   // console.log(jewelryData) //JSON DATA IS WORKING Guys!!
 const [jewelryList, setJewelryList]=useState([]) //calling state
-const [cart, setCart] = useState([])
-const cartCount = cart.length;
 
 useEffect(()=>  {
   fetch("http://localhost:3000/jewelryData")
@@ -20,7 +17,7 @@ useEffect(()=>  {
 
   return (
     <>
-    <Navbar cartCount={cartCount} />
+    <Navbar />
 
     <ProductList jewelries={jewelryList} />
     </>
