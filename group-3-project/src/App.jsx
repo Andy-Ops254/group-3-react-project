@@ -24,6 +24,14 @@ function handleAddToCart(item){
 }
 //here i add a fuction to handle adding an item to the cart
 
+function handleRemoveFromCart(index) {
+  const updatedCart = [...cart];
+  updatedCart.splice(index, 1);
+  setCart(updatedCart);
+}
+//then i create a function to handle removing an item from the cart by index
+//creates a copy of the cart,removes the specified item and updates the state
+
   return (
     <>
     <Navbar />
