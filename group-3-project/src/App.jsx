@@ -58,7 +58,7 @@ function handleAddToProduct(newProduct) {
     <Routes>
       <Route path="/" element={<ProductList jewelries={jewelryList}  onAddToCart={handleAddToCart} categories={categories}/>}/>
       <Route path="/About" element={<About />} />
-      <Route path="/" element={<Cart items={cart} onRemove={handleRemoveFromCart} />} />
+      <Route path="/Cart" element={<Cart items={cart} onRemove={handleRemoveFromCart} />} />
       <Route path='/newform' element={<AddProductForm onAddProduct={handleAddToProduct} />} />
     </Routes>
       <Footer />
