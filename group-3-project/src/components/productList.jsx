@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import App from '../App';
 import ProductCard from './ProductCard';
+import AddProductForm from './AddProductForm';
 
 
 function ProductList ({jewelries, categories, onAddToCart}) {
@@ -55,6 +56,8 @@ function ProductList ({jewelries, categories, onAddToCart}) {
                 //used the product card component finl
             ))}
             </div>
+                
+
         </div>
         
     )

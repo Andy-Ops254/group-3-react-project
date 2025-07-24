@@ -26,6 +26,7 @@ function Navbar({cartCount}) {
                 >About</NavLink>
 
 
+
                 <NavLink to="/cart" style = {{...styles.link, 
                     color:hovered === "cart" ? "#6FE6FC" : "#fff" ,
 
@@ -33,7 +34,11 @@ function Navbar({cartCount}) {
                 onMouseEnter={()=> handleMouseEnter("cart")}
                 onMouseLeave={handleMouseLeave}
                 id="cart">🛒 Cart({cartCount})</NavLink>
+
                  <div>
+
+                <NavLink to="/newform">ADD NEW FORM</NavLink>
+                
             </div>
 
             </div>
@@ -43,7 +48,7 @@ function Navbar({cartCount}) {
 const styles = {
     nav: {
 
-        backgroundColor: "#0065F8",
+        backgroundColor: "#ff6289",
         padding:"16px 32px",
         display:"flex",
         justifyContent:"space-between",
