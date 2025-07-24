@@ -19,7 +19,7 @@ function ProductCard ({name, price, image, category, onAddToCart}) {
 
             <button 
             onClick={handleClick}
-            className='bg-gray-300 p-2 rounded-4xl w-full h-auto font-bold text-center hover:bg-sky-300 active:bg-sky-700 cursor-pointer m-2 '>
+            className='bg-gray-300 p-2 rounded-4xl w-full h-auto font-bold text-center hover:bg-[#FFD1DC] active:bg-[#FCB2C5] cursor-pointer m-2 '>
               ADD TO CART</button>
         </div>
     </div>

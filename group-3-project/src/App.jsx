@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import About from './components/About'
 import Cart from './components/Cart'
-
+import Footer from './components/footer'
 
 function App() {
   // console.log(jewelryData) //JSON DATA IS WORKING Guys!!
@@ -56,6 +56,7 @@ function handleRemoveFromCart(index) {
       <Route path="/About" element={<About />} />
       <Route path="/Cart" element={<Cart items={cart} onRemove={handleRemoveFromCart} />} />
     </Routes>
+      <Footer />
 
     </>
     
