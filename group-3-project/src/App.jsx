@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import About from './components/About'
 import Cart from './components/Cart'
+import AddProductForm from './components/AddProductForm'
 import Footer from './components/footer'
 
 function App() {
@@ -46,6 +47,9 @@ function handleRemoveFromCart(index) {
 }
 //then i create a function to handle removing an item from the cart by index
 //creates a copy of the cart,removes the specified item and updates the state
+function handleAddToProduct(newProduct) {
+  setJewelryList([...jewelryList, newProduct])
+}
 
   return (
     <>
@@ -54,7 +58,8 @@ function handleRemoveFromCart(index) {
     <Routes>
       <Route path="/" element={<ProductList jewelries={jewelryList}  onAddToCart={handleAddToCart} categories={categories}/>}/>
       <Route path="/About" element={<About />} />
-      <Route path="/Cart" element={<Cart items={cart} onRemove={handleRemoveFromCart} />} />
+      <Route path="/" element={<Cart items={cart} onRemove={handleRemoveFromCart} />} />
+      <Route path='/newform' element={<AddProductForm onAddProduct={handleAddToProduct} />} />
     </Routes>
       <Footer />
 

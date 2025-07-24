@@ -18,10 +18,11 @@ function AddProductForm({onAddProduct}) {
             name:formData.name,
             price:Number(formData.price),
             image:formData.image ||
-            "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            category:formData.category || "Uncategorized"
         }
         onAddProduct(newProduct)
-        setFormData({name:"",price:"",image:""});
+        setFormData({name:"",price:"",image:"",category:""});
     }
     return (
         <form onSubmit={handleSubmit} style={styles.form}>
@@ -53,33 +54,53 @@ function AddProductForm({onAddProduct}) {
             onChange={handleChange}
             style={styles.input}
             />
+            <input
+            type="text"
+            name="category"
+            placeholder="Category"
+            value={formData.category}
+            onChange={handleChange}
+            required
+            style={styles.input}
+            />
+        
             <button type="submit" style={styles.button}>Add Product</button> 
         </form>
     )
 }
 const styles = {
-    form:{
-        display:"flex",
-        gap: "16px",
-        padding: "16px 32px",
-        backgroundColor:"f9f9f9",
-        borderBottom: "1px solid #ddd",
-        flexWrap:"wrap",
-    },
-    input:{
-        padding:"0.5rem",
-        border: "1px solid #ccc",
-        borderRadius: "4px",
-        flex: "1 1 200px",
-    },
-    button:{
-        padding:"0.5rem 1rem",
-        backgroundColor: "#333",
-        color:"white",
-        border:"none",
-        borderRadius:"4px",
-        cursor:"pointer",
-    },
+  form: {
+    maxWidth: "500px",
+    margin: "60px auto",
+    padding: "40px",
+    backgroundColor: "#fff",
+    borderRadius: "12px",
+    boxShadow: "0 8px 30px rgba(0, 0, 0, 0.1)",
+    display: "flex",
+    flexDirection: "column",
+    gap: "20px",
+    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+  },
+  input: {
+    padding: "14px 18px",
+    border: "1px solid #ccc",
+    borderRadius: "8px",
+    fontSize: "15px",
+    outline: "none",
+    transition: "border-color 0.2s, box-shadow 0.2s",
+  },
+  button: {
+    padding: "14px 18px",
+    backgroundColor: "#ff6289",
+    color: "#000000",
+    border: "none",
+    borderRadius: "8px",
+    fontSize: "16px",
+    fontWeight: "bold",
+    cursor: "pointer",
+    transition: "background-color 0.3s, transform 0.2s",
+  },
+};
 
-}
+
 export default AddProductForm;
