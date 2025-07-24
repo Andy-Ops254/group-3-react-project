@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import About from './components/About'
 import Cart from './components/Cart'
-
+import Footer from './components/footer'
 
 function App() {
   // console.log(jewelryData) //JSON DATA IS WORKING Guys!!
@@ -56,7 +56,7 @@ function handleRemoveFromCart(index) {
       <Route path="/" element={<Cart items={cart} onRemove={handleRemoveFromCart} />} />
     </Routes>
       <Cart items={cart} onRemove={handleRemoveFromCart} />
-
+      <Footer />
     </>
     
     //then i pass the total cart count to the navbar so it can be displayed to the user
