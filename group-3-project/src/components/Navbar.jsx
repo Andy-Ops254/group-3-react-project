@@ -37,6 +37,7 @@ function Navbar({cartCount}) {
                  <div>
 
                 <NavLink to="/newform">ADD NEW FORM</NavLink>
+                
             </div>
 
             </div>

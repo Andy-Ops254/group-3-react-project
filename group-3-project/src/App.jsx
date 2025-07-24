@@ -50,12 +50,12 @@ function handleRemoveFromCart(index) {
   return (
     <>
     <Navbar cartCount={cartCount} />
+
     <Routes>
       <Route path="/" element={<ProductList jewelries={jewelryList}  onAddToCart={handleAddToCart} categories={categories}/>}/>
       <Route path="/About" element={<About />} />
       <Route path="/Cart" element={<Cart items={cart} onRemove={handleRemoveFromCart} />} />
     </Routes>
-      
 
     </>
     

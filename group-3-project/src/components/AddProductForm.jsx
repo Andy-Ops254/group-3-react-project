@@ -72,6 +72,14 @@ const styles = {
         borderRadius: "4px",
         flex: "1 1 200px",
     },
+    button:{
+        padding:"0.5rem 1rem",
+        backgroundColor: "#333",
+        color:"white",
+        border:"none",
+        borderRadius:"4px",
+        cursor:"pointer",
+    },
 
 }
 export default AddProductForm;
