@@ -30,9 +30,8 @@ function App() {
       <Route path="/" element={<ProductList jewelries={jewelryList} onAddProduct={updateList}/>} />
       <Route path="/About" element={<About />} />
       <Route path="/newform" element={<AddProductForm />}/>
-
     </Routes>
-    </>  
+  </>  
   )
 }
 
