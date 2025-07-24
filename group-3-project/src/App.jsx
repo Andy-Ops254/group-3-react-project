@@ -54,6 +54,7 @@ function handleAddToProduct(newProduct) {
   return (
     <>
     <Navbar cartCount={cartCount} />
+
     <Routes>
       <Route path="/" element={<ProductList jewelries={jewelryList}  onAddToCart={handleAddToCart} categories={categories}/>}/>
       <Route path="/About" element={<About />} />
