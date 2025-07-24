@@ -2,7 +2,7 @@ import {useState} from "react";
 import { NavLink } from "react-router-dom";
 
 
-function Navbar() {
+function Navbar({cartCount}) {
     const [hovered, setHovered] = useState(null);
     const handleMouseEnter = (item) => setHovered(item)
     const handleMouseLeave = () => setHovered(null)
@@ -24,6 +24,15 @@ function Navbar() {
                 onMouseEnter={() => handleMouseEnter("about")}
                 onMouseLeave={handleMouseLeave} id="about"
                 >About</NavLink>
+
+
+                <NavLink to="/cart" style = {{...styles.link, 
+                    color:hovered === "cart" ? "#6FE6FC" : "#fff" ,
+
+                }}
+                onMouseEnter={()=> handleMouseEnter("cart")}
+                onMouseLeave={handleMouseLeave}
+                id="cart">🛒 Cart({cartCount})</NavLink>
                  <div>
             </div>
 
