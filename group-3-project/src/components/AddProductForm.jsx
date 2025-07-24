@@ -18,10 +18,11 @@ function AddProductForm({onAddProduct}) {
             name:formData.name,
             price:Number(formData.price),
             image:formData.image ||
-            "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            category:formData.category || "Uncategorized"
         }
         onAddProduct(newProduct)
-        setFormData({name:"",price:"",image:""});
+        setFormData({name:"",price:"",image:"",category:""});
     }
     return (
         <form onSubmit={handleSubmit} style={styles.form}>
@@ -53,6 +54,16 @@ function AddProductForm({onAddProduct}) {
             onChange={handleChange}
             style={styles.input}
             />
+            <input
+            type="text"
+            name="category"
+            placeholder="Category"
+            value={formData.category}
+            onChange={handleChange}
+            required
+            style={styles.input}
+            />
+        
             <button type="submit" style={styles.button}>Add Product</button> 
         </form>
     )
