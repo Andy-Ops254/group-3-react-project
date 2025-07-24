@@ -2,8 +2,6 @@ import react,{useState, useEffect, useDebugValue} from 'react'
 import jewelryData from '../jewelryData'
 import ProductList from './components/productList'
 import Navbar from './components/Navbar'
-
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import About from './components/About'
 import Cart from './components/Cart'
@@ -50,24 +48,21 @@ function handleRemoveFromCart(index) {
 //creates a copy of the cart,removes the specified item and updates the state
 
   return (
-    <Navbar />
+    <>
+    <Navbar cartCount={cartCount} />
     <Routes>
-      <Route path="/" element={<ProductList jewelries={jewelryList} />} />
+      <Route path="/" element={<ProductList jewelries={jewelryList}  onAddToCart={handleAddToCart} categories={categories}/>}/>
       <Route path="/About" element={<About />} />
+      <Route path="/" element={<Cart items={cart} onRemove={handleRemoveFromCart} />} />
     </Routes>
-
-    <Navbar cartCount={cartCount}/>
-    {/*then i pass the total cart count to the navbar so it can be displayed to the user*/}
-
-    <ProductList jewelries={jewelryList} onAddToCart={handleAddToCart} categories={categories} />
-    {/*passed the add to cart handler down to each product component*/}
-
-    <Cart items={cart} onRemove={handleRemoveFromCart} />
-    {/*then rendered the cart component and passed the cart items and remove handler as props */}
+      <Cart items={cart} onRemove={handleRemoveFromCart} />
 
     </>
-
     
+    //then i pass the total cart count to the navbar so it can be displayed to the user
+    //passed the add to cart handler down to each product component
+    // then rendered the cart component and passed the cart items and remove handler as props 
+
   )
 }
 
