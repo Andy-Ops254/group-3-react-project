@@ -25,7 +25,7 @@ function ProductCard ({name, price, image, category, onAddToCart}) {
     </div>
             //Button structure
 
-  )
+ )
 }
 
 export default ProductCard
