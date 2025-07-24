@@ -55,7 +55,6 @@ function handleRemoveFromCart(index) {
       <Route path="/About" element={<About />} />
       <Route path="/" element={<Cart items={cart} onRemove={handleRemoveFromCart} />} />
     </Routes>
-      <Cart items={cart} onRemove={handleRemoveFromCart} />
 
     </>
     
