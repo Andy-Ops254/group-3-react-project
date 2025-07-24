@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import About from './components/About'
 import Cart from './components/Cart'
 import AddProductForm from './components/AddProductForm'
-
+import Footer from './components/footer'
 
 function App() {
   // console.log(jewelryData) //JSON DATA IS WORKING Guys!!
@@ -61,6 +61,7 @@ function handleAddToProduct(newProduct) {
       <Route path="/" element={<Cart items={cart} onRemove={handleRemoveFromCart} />} />
       <Route path='/newform' element={<AddProductForm onAddProduct={handleAddToProduct} />} />
     </Routes>
+      <Footer />
 
     </>
     
