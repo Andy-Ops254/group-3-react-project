@@ -20,7 +20,7 @@ const cartCount = cart.length;
 //then i create a variable to track and display the number of items in the cart
 
 useEffect(()=>  {
-  fetch("http://localhost:3000/jewelryData")
+  fetch("https://jewelerydata-json.onrender.com/api/jewelryData")
   .then(res => res.json())
   .then(Data => setJewelryList(Data)) //update the state, passdown as prop to component
 }, [])
